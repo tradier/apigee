@@ -37,12 +37,12 @@ module Apigee
         get("/oauth2/authorizationcodes")
       end
 
-      # Get Authorization Code  Detail
+      # Get Authorization Code
       def auth_code(token)
         get("/oauth2/authorizationcodes/#{token}")
       end
 
-      # Delete Authorization Code Detail
+      # Delete Authorization Code
       def delete_auth_code(token)
         delete("/oauth2/authorizationcodes/#{token}")
       end
