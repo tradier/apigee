@@ -1,0 +1,22 @@
+{
+    "authorizationCode": [
+        {
+            "attributes": [
+                {
+                    "name": "region",
+                    "value": "south"
+                }
+            ],
+            "client_id": "kjvzAT2kR03jcZGQDod6VtMt8Lj0Ce6c",
+            "code": "m9PEEI6I",
+            "createdAt": 1343043442176,
+            "createdBy": "Admin",
+            "expiresAt": 1343045242176,
+            "issuedAt": 1343043442176,
+            "lastModifiedAt": 1343043442176,
+            "lastModifiedBy": "Admin",
+            "scope": "",
+            "status": "active"
+        }
+    ]
+}

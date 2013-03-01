@@ -1,0 +1,18 @@
+{
+  "app" : "app1",
+  "attributes" : [ ],
+  "clientId" : "fGytmxA5UDajPMdOA5E3bebiBOBPikOT",
+  "createdAt" : 1343036540877,
+  "createdBy" : "defaultUser",
+  "expiresAt" : 1343038340877,
+  "grantType" : "password",
+  "issuedAt" : 1343036540877,
+  "lastModifiedAt" : 1343036540877,
+  "lastModifiedBy" : "defaultUser",
+  "refreshCount" : 0,
+  "refreshToken" : "Nn5Pt2eO",
+  "scope" : "",
+  "status" : "approved",
+  "token" : "25poPXCPOw43s0hJBn6tQYnUb5KF",
+  "tokenType" : "BearerToken"
+}
