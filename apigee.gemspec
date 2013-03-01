@@ -10,8 +10,15 @@ Gem::Specification.new do |gem|
 
   gem.author      = "Jason Barry"
   gem.email       = 'jbarry@tradier.com'
-  gem.description = 'Apigee management API interface'
-  gem.summary     = 'Apigee management API interface'
+  gem.description = %q{Ruby Apigee Client}
+  gem.summary     = %q{Ruby Client for Apigee's Full API}
+
+  gem.add_development_dependency 'simplecov'
+
+  gem.add_runtime_dependency 'faraday_middleware', '~> 0.7'
+  gem.add_runtime_dependency 'multi_json', '~> 1'
+  gem.add_runtime_dependency 'rash'
+  gem.add_runtime_dependency 'simple_oauth'
 
   gem.executables = `git ls-files -- bin/*`.split("\n").map{|f| File.basename(f)}
   gem.files       = `git ls-files`.split("\n")

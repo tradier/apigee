@@ -4,6 +4,7 @@ unless ENV['CI']
   SimpleCov.start do
     add_group 'Apigee', 'lib/apigee'
     add_group 'Specs', 'spec'
+    add_filter '.bundle'
   end
 end
 
