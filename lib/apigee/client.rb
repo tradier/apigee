@@ -1,5 +1,3 @@
-require 'faraday'
-require 'multi_json'
 require 'apigee/connection'
 require 'apigee/api/oauth2'
 
@@ -31,7 +29,7 @@ module Apigee
 
     # Perform an HTTP POST request
     def post(path, params={})
-      request(:post, path, params, signature_params)
+      request(:post, path, params)
     end
 
     # Perform an HTTP PUT request
@@ -42,11 +40,9 @@ module Apigee
   private
 
     # Perform an HTTP request
-    def request(method, path, options, raw=false)
-      response = connection(raw).send(method) do |request|
-        request.path = path_prefix + organization + path
-        request.body = options unless options.empty?
-      end
+    def request(method, path, params, raw=false)
+      url = path_prefix + organization + path
+      response = connection(raw).send(method, url, params)
       raw ? response : response.body
     end
 
