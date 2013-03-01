@@ -14,6 +14,7 @@ Gem::Specification.new do |gem|
   gem.summary     = %q{Ruby Client for Apigee's Full API}
 
   gem.add_development_dependency 'simplecov'
+  gem.add_development_dependency 'webmock'
 
   gem.add_runtime_dependency 'faraday_middleware', '~> 0.7'
   gem.add_runtime_dependency 'multi_json', '~> 1'
