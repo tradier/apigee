@@ -1,0 +1,22 @@
+{
+  "apiProducts" : [ "sandbox" ],
+  "app" : "app1",
+  "attributes" : [ {
+  "name" : "att_n1",
+  "value" : "att_v1"
+  } ],
+  "clientId" : "fGytmxA5UDajPMdOA5E3bebiBOBPikOT",
+  "createdAt" : 1343038476540,
+  "createdBy" : "defaultUser",
+  "expiresAt" : 1343040276540,
+  "grantType" : "password",
+  "issuedAt" : 1343038476540,
+  "lastModifiedAt" : 1343038476958,
+  "lastModifiedBy" : "defaultUser",
+  "refreshCount" : 0,
+  "refreshToken" : "1h11770Z",
+  "scope" : "read",
+  "status" : "approved",
+  "token" : "taFM3LHUTQAFhL0dIFg81XhRc7vC",
+  "tokenType" : "BearerToken"
+}

@@ -28,9 +28,9 @@ module Apigee
       end
 
       # TODO Update Access Token
-      # def update_access_token(token)
-      #   update("/oauth2/accesstokens/#{token}")
-      # end
+      def update_access_token(token, params)
+        put("/oauth2/accesstokens/#{token}", params)
+      end
 
       # List Authorization Codes
       def auth_codes

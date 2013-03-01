@@ -85,6 +85,25 @@ describe Apigee::API::Oauth2 do
     end
   end
 
+  describe '.update_access_token' do
+    before(:each) do
+      @token = 'taFM3LHUTQAFhL0dIFg81XhRc7vC'
+      @req = stub_request(:put, "https://sjobs:iphone@api.enterprise.apigee.com/v1/o/apple/oauth2/accesstokens/#{@token}").
+         to_return(:status => 200, :body => fixture("update_access_token.json"), :headers => {})
+    end
+
+    it "should get the correct resource" do
+      @client.update_access_token(@token, {:att_n1 => 'att_v1'})
+      @req.should have_been_made
+    end
+
+    it "should return the same access token" do
+      token = @client.update_access_token(@token, {:att_n1 => 'att_v1'})
+      token.attributes.should be_a Array
+      token.attributes.first.name.should == 'att_n1'
+    end
+  end
+
   describe '.auth_codes' do
     before(:each) do
       @req = stub_request(:get, "https://sjobs:iphone@api.enterprise.apigee.com/v1/o/apple/oauth2/authorizationcodes").
