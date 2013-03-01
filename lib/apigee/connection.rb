@@ -1,3 +1,5 @@
+require 'faraday'
+require 'multi_json'
 require 'faraday_middleware'
 
 module Apigee
