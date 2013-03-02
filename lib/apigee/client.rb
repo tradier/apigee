@@ -1,10 +1,19 @@
 require 'apigee/connection'
+require 'apigee/api/apis'
+require 'apigee/api/apps'
+require 'apigee/api/analytics'
 require 'apigee/api/oauth2'
+require 'apigee/api/products'
+
 
 module Apigee
   class Client
     include Apigee::Connection
+    include Apigee::API::Apis
+    include Apigee::API::Apps
+    include Apigee::API::Analytics
     include Apigee::API::Oauth2
+    include Apigee::API::Products
 
     # @private
     attr_accessor *Configuration::VALID_OPTIONS_KEYS
