@@ -27,7 +27,7 @@ module Apigee
         delete("/oauth2/accesstokens/#{token}")
       end
 
-      # TODO Update Access Token
+      # Update Access Token
       def update_access_token(token, params)
         put("/oauth2/accesstokens/#{token}", params)
       end
