@@ -16,7 +16,7 @@ describe Apigee::API::Apps do
       @req.should have_been_made
     end
 
-    it "should return the number of access tokens" do
+    it "returns the number of access tokens" do
       apps = @client.apps
       apps.should be_an(Array)
       apps.first.should eq('7b3ec66d-de8b-4ab5-8025-d949285bed4f')

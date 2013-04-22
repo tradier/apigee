@@ -11,12 +11,12 @@ describe Apigee::API::Oauth2 do
          to_return(:status => 200, :body => fixture("access_token_count.json"), :headers => {})
     end
 
-    it "should get the correct resource" do
+    it "gets the correct resource" do
       @client.access_token_count
       @req.should have_been_made
     end
 
-    it "should return the number of access tokens" do
+    it "returns the number of access tokens" do
       access_token_count = @client.access_token_count
       access_token_count.value.should be_a Integer
       access_token_count.value.should == 1400
@@ -30,7 +30,7 @@ describe Apigee::API::Oauth2 do
          to_return(:status => 204, :headers => {})
     end
 
-    it "should get the correct resource" do
+    it "gets the correct resource" do
       @client.approve_access_token(@token)
       @req.should have_been_made
     end
@@ -43,7 +43,7 @@ describe Apigee::API::Oauth2 do
          to_return(:status => 204, :headers => {})
     end
 
-    it "should get the correct resource" do
+    it "gets the correct resource" do
       @client.revoke_access_token(@token)
       @req.should have_been_made
     end
@@ -56,12 +56,12 @@ describe Apigee::API::Oauth2 do
          to_return(:status => 200, :body => fixture("access_token.json"), :headers => {})
     end
 
-    it "should get the correct resource" do
+    it "gets the correct resource" do
       @client.access_token(@token)
       @req.should have_been_made
     end
 
-    it "should return the same access token" do
+    it "returns the same access token" do
       token = @client.access_token(@token)
       token.token.should == @token
     end
@@ -74,12 +74,12 @@ describe Apigee::API::Oauth2 do
          to_return(:status => 200, :body => fixture("delete_access_token.json"), :headers => {})
     end
 
-    it "should get the correct resource" do
+    it "gets the correct resource" do
       @client.delete_access_token(@token)
       @req.should have_been_made
     end
 
-    it "should return the same access token" do
+    it "returns the same access token" do
       token = @client.delete_access_token(@token)
       token.token.should == @token
     end
@@ -92,12 +92,12 @@ describe Apigee::API::Oauth2 do
          to_return(:status => 200, :body => fixture("update_access_token.json"), :headers => {})
     end
 
-    it "should get the correct resource" do
+    it "gets the correct resource" do
       @client.update_access_token(@token, {:att_n1 => 'att_v1'})
       @req.should have_been_made
     end
 
-    it "should return the same access token" do
+    it "returns the same access token" do
       token = @client.update_access_token(@token, {:att_n1 => 'att_v1'})
       token.attributes.should be_a Array
       token.attributes.first.name.should == 'att_n1'
@@ -110,12 +110,12 @@ describe Apigee::API::Oauth2 do
          to_return(:status => 200, :body => fixture("auth_codes.json"), :headers => {})
     end
 
-    it "should get the correct resource" do
+    it "gets the correct resource" do
       @client.auth_codes
       @req.should have_been_made
     end
 
-    it "should return the same access token" do
+    it "returns the same access token" do
       codes = @client.auth_codes
       codes.authorizationCode.should be_a Array
       codes.authorizationCode.first.code.should == 'm9PEEI6I'
@@ -129,12 +129,12 @@ describe Apigee::API::Oauth2 do
          to_return(:status => 200, :body => fixture("auth_code.json"), :headers => {})
     end
 
-    it "should get the correct resource" do
+    it "gets the correct resource" do
       @client.auth_code(@code)
       @req.should have_been_made
     end
 
-    it "should return the same access token" do
+    it "returns the same access token" do
       code = @client.auth_code(@code)
       code.code.should == 'm9PEEI6I'
     end
@@ -147,12 +147,12 @@ describe Apigee::API::Oauth2 do
          to_return(:status => 200, :body => fixture("auth_code.json"), :headers => {})
     end
 
-    it "should get the correct resource" do
+    it "gets the correct resource" do
       @client.delete_auth_code(@code)
       @req.should have_been_made
     end
 
-    it "should return the deleted code" do
+    it "returns the deleted code" do
       code = @client.delete_auth_code(@code)
       code.code.should == 'm9PEEI6I'
     end

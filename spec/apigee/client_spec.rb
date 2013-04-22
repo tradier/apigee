@@ -19,7 +19,7 @@ describe Apigee::Client do
     end
 
     context 'with module configuration' do
-      it "should inherit module configuration" do
+      it "inherits the module configuration" do
         api = Apigee::Client.new
         @keys.each do |key|
           api.send(key).should eq(key)
@@ -29,7 +29,7 @@ describe Apigee::Client do
 
     context 'with class configuration' do
       context "during initialization" do
-        it "should override module configuration" do
+        it "overrides the module configuration" do
           api = Apigee::Client.new(@options)
           @keys.each do |key|
             h = @options.has_key?(key) ? @options : Apigee.options
@@ -39,7 +39,7 @@ describe Apigee::Client do
       end
 
       context "after initialization" do
-        it "should override module configuration after initialization" do
+        it "overrides the module configuration after initialization" do
           api = Apigee::Client.new
           @options.each do |key, value|
             api.send("#{key}=", value)

@@ -18,7 +18,7 @@ describe Apigee do
   end
 
   describe ".adapter" do
-    it "should return the default adapter" do
+    it "returns the default adapter" do
       Apigee.adapter.should == Apigee::Configuration::DEFAULT_ADAPTER
     end
   end
@@ -31,7 +31,7 @@ describe Apigee do
   end
 
   describe ".endpoint" do
-    it "should return the default endpoint" do
+    it "returns the default endpoint" do
       Apigee.endpoint.should == Apigee::Configuration::DEFAULT_ENDPOINT
     end
   end
@@ -44,7 +44,7 @@ describe Apigee do
   end
 
   describe ".user_agent" do
-    it "should return the default user agent" do
+    it "returns the default user agent" do
       Apigee.user_agent.should == Apigee::Configuration::DEFAULT_USER_AGENT
     end
   end
@@ -57,7 +57,7 @@ describe Apigee do
   end
 
   describe ".version" do
-    it "should return the default version" do
+    it "returns the default version" do
       Apigee.version.should == Apigee::Configuration::DEFAULT_VERSION
     end
   end
