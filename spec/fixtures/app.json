@@ -1,0 +1,27 @@
+{
+  "accessType" : "read",
+  "apiProducts" : [ ],
+  "appFamily" : "default",
+  "appId" : "72d0da6a-6441-48d8-98af-1da6187d0adc",
+  "attributes" : [ ],
+  "callbackUrl" : "login.myapp.com",
+  "createdAt" : 1354204157152,
+  "createdBy" : "andrew@apigee.com",
+  "credentials" : [ {
+    "apiProducts" : [ {
+      "apiproduct" : "API PremiumProduct",
+      "status" : "approved"
+    } ],
+    "attributes" : [ ],
+    "consumerKey" : "FbLtTbxQC3jhGlNFbeGI75fsfaVH4ZmQ",
+    "consumerSecret" : "IwpLk8xg8lX1AUxY",
+    "scopes" : [ ],
+    "status" : "approved"
+  } ],
+  "developerId" : "jAvgq2abxyuMsyd0",
+  "lastModifiedAt" : 1354204157152,
+  "lastModifiedBy" : "andrew@apigee.com",
+  "name" : "SampleApp",
+  "scopes" : [ ],
+  "status" : "approved"
+}

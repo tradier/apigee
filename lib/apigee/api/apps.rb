@@ -3,8 +3,8 @@ module Apigee
     module Apps
 
       # List apps in an org
-      def apps
-        get('/apps')
+      def apps(options={})
+        get('/apps', options)
       end
 
       # Get an app profile (by id)
@@ -14,18 +14,24 @@ module Apigee
       alias :app :app_by_id
 
       # Get an app profile (by family)
-      def app_by_family(family)
-        get("/apps", {:appfamily => family})
+      def apps_by_family(family)
+        apps(:appfamily => family)
       end
 
       # Get an app profile (by status)
-      def app_by_status(status)
-        get("/apps", {:status => status})
+      def apps_by_status(status)
+        apps(:status => status)
       end
 
       # Get an app profile (by type)
-      def app_by_type(type)
-        get("/apps", {:apptype => type})
+      def apps_by_type(type)
+        apps(:apptype => type)
+      end
+
+      # Get an app profile (by type)
+      def apps_by_creation_date(createdat)
+        t = createdat.is_a?(Time) ? createdat.to_i : createdat
+        apps(:createdat => t)
       end
 
     end
