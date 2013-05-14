@@ -1,3 +1,4 @@
+require 'apigee/version'
 require 'faraday_middleware'
 
 module Apigee
