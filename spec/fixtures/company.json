@@ -1,0 +1,14 @@
+{
+  "name" : "MyCo",
+  "displayName" : "My Company",
+  "organization" : "myorg",
+  "status" : "inactive",
+  "attributes" : [ {
+    "name" : "region",
+    "value" : "north"
+  } ],
+  "createdAt" : 1343049811765,
+  "createdBy" : "Admin",
+  "lastModifiedAt" : 1343049811765,
+  "lastModifiedBy" : "Admin"
+}
