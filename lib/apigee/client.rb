@@ -50,7 +50,7 @@ module Apigee
       request(:put, path, params)
     end
 
-  private
+    private
 
     # Perform an HTTP request
     def request(method, path, params, raw=false)
