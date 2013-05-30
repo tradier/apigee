@@ -20,10 +20,9 @@ module Apigee
 
       Faraday.new(merged_options) do |builder|
         builder.use Faraday::Request::BasicAuthentication, username, password
-        builder.use Faraday::Request::Multipart
-        builder.use Faraday::Request::UrlEncoded
-        builder.use Faraday::Response::Rashify unless raw
-        builder.use Faraday::Response::ParseJson unless raw
+        builder.use FaradayMiddleware::EncodeJson
+        builder.use FaradayMiddleware::Rashify unless raw
+        builder.use FaradayMiddleware::ParseJson unless raw
         builder.adapter(adapter)
       end
     end
