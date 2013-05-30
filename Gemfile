@@ -9,8 +9,9 @@ group :development do
 end
 
 group :test do
+  gem 'json'
   gem 'rspec'
-  gem 'simplecov', :require => false
+  gem 'simplecov', require: false
 end
 
 gemspec
