@@ -11,6 +11,7 @@ end
 group :test do
   gem 'json'
   gem 'rspec'
+  gem 'webmock'
   gem 'simplecov', require: false
 end
 
