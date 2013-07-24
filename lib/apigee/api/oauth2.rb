@@ -27,6 +27,11 @@ module Apigee
         delete("/oauth2/accesstokens/#{token}")
       end
 
+      # Delete an Access Token and return true/false on success/failure
+      def delete_access_token!(token)
+        return delete("/oauth2/accesstokens/#{token}", nil, true).status == 200
+      end
+
       # Update Access Token
       def update_access_token(token, params)
         put("/oauth2/accesstokens/#{token}", params)

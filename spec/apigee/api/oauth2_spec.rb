@@ -85,6 +85,29 @@ describe Apigee::API::Oauth2 do
     end
   end
 
+  describe '.delete_access_token!' do
+    before(:each) do
+      @token = 'taFM3LHUTQAFhL0dIFg81XhRc7vC'
+      @req = stub_request(:delete, "https://sjobs:iphone@api.enterprise.apigee.com/v1/o/apple/oauth2/accesstokens/#{@token}").
+         to_return(:status => 200, :body => fixture("delete_access_token.json"), :headers => {})
+    end
+
+    it "gets the correct resource" do
+      @client.delete_access_token(@token)
+      @req.should have_been_made
+    end
+
+    it "returns the true when the token was deleted" do
+      @client.delete_access_token(@token).should be_true
+    end
+
+    it "returns the false if unsuccessful" do
+      @req = stub_request(:delete, "https://sjobs:iphone@api.enterprise.apigee.com/v1/o/apple/oauth2/accesstokens/#{@token}").
+         to_return(:status => 404, :headers => {})
+      @client.delete_access_token(@token).should be_false
+    end
+  end
+
   describe '.update_access_token' do
     before(:each) do
       @token = 'taFM3LHUTQAFhL0dIFg81XhRc7vC'
