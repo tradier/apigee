@@ -42,7 +42,7 @@ describe Apigee::API::CompanyApps do
 
   describe '.update_company_app' do
     before(:each) do
-      @req = stub_request(:post, "https://sjobs:iphone@api.enterprise.apigee.com/v1/o/apple/companies/MyCo/apps/MyApp").
+      @req = stub_request(:put, "https://sjobs:iphone@api.enterprise.apigee.com/v1/o/apple/companies/MyCo/apps/MyApp").
          to_return(:status => 200, :body => fixture("company_app.json"), :headers => {})
     end
 

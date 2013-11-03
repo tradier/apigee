@@ -10,7 +10,7 @@ module Apigee
       def update_company_app(options={})
         company_name = options.delete(:company_name)
         app_name     = options[:name]
-        post("/companies/#{company_name}/apps/#{app_name}", options)
+        put("/companies/#{company_name}/apps/#{app_name}", options)
       end
 
       def delete_company_app(options={})
