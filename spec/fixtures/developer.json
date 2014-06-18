@@ -1,0 +1,16 @@
+{
+  "email" : "ntesla@theramin.com",
+  "firstName" : "Nikola",
+  "lastName" : "Tesla",
+  "userName" : "theramin",
+  "organizationName" : "myorg",
+  "status" : "inactive",
+  "attributes" : [ {
+    "name" : "region",
+    "value" : "north"
+  } ],
+  "createdAt" : 1345058241037,
+  "createdBy" : "Admin",
+  "lastModifiedAt" : 1345058241037,
+  "lastModifiedBy" : "Admin"
+}
