@@ -10,7 +10,7 @@ end
 
 group :test do
   gem 'json'
-  gem 'rspec'
+  gem 'rspec', '~> 2'
   gem 'webmock'
   gem 'simplecov', require: false
 end
