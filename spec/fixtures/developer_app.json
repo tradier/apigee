@@ -1,0 +1,24 @@
+{
+  "accessType" : "read",
+  "attributes" : [ {
+    "name" : "Language",
+    "value" : "java"
+  } ],
+  "callbackUrl" : "www.apigee.com",
+  "createdAt" : 1343050516114,
+  "createdBy" : "Admin",
+  "credentials" : [ {
+    "apiProducts" : [ {
+      "apiproduct" : "TestApiProduct",
+      "status" : "approved"
+    } ],
+    "attributes" : [ ],
+    "consumerKey" : "N6S0jcOhgbsCJD3B7EGNFo0FYAZSpCez",
+    "consumerSecret" : "BCJpVuK3uq9VuEgK",
+    "status" : "approved"
+  } ],
+  "lastModifiedAt" : 1343050516114,
+  "lastModifiedBy" : "Admin",
+  "name" : "sandboxTestApp",
+  "status" : "approved"
+}

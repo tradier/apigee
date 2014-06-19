@@ -3,6 +3,7 @@ require 'apigee/api/apis'
 require 'apigee/api/apps'
 require 'apigee/api/analytics'
 require 'apigee/api/developers'
+require 'apigee/api/developer_apps'
 require 'apigee/api/companies'
 require 'apigee/api/company_apps'
 require 'apigee/api/oauth2'
@@ -16,6 +17,7 @@ module Apigee
     include Apigee::API::Apps
     include Apigee::API::Analytics
     include Apigee::API::Developers
+    include Apigee::API::DeveloperApps
     include Apigee::API::Companies
     include Apigee::API::CompanyApps
     include Apigee::API::Oauth2
