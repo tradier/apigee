@@ -14,7 +14,6 @@ module Apigee
           'User-Agent' => user_agent
         },
         :proxy => proxy,
-        :ssl => {:verify => false},
         :url => endpoint
       })
 
